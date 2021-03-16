@@ -1,0 +1,29 @@
+<?php
+
+/** @var $viewModel \Overdose\Lesson3\ViewModel\One */
+
+$viewModel = $block->getViewModel();
+
+?>
+<h1><?= $viewModel->getNewPhrase() ?></h1>
+
+<table border="1">
+    <tr>
+        <td>Имя</td>
+        <td>Возраст</td>
+        <td>Заметки</td>
+        <td>Вермя создания</td>
+    </tr>
+<?php foreach ($viewModel->showFriendsList() as $item):?>
+
+    <?php echo
+        '<tr>' .
+        '<td>' . $item['name'] . '</td>' .
+        '<td>' . $item['age'] . '</td>' .
+        '<td>' . $item['notes'] . '</td>' .
+        '<td>' . $item['created_at'] . '</td>' .
+        '</tr>'
+    ;?>
+
+    <?php endforeach; ?>
+</table>

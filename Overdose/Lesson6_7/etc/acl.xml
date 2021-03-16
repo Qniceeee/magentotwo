@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Overdose_Lesson6::overdose" title="Overdose Menu Section" translate="true" sortOrder="57" />
+                <resource id="Overdose_Lesson6::overdose_edit" title="Edit Overdose" sortOrder="10"/>
+            </resource>
+        </resources>
+    </acl>
+</config>

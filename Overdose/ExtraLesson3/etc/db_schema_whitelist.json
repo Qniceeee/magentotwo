@@ -1,0 +1,10 @@
+{
+    "overdose_extralesson3": {
+        "column": {
+            "text": true
+        },
+        "index": {
+            "OVERDOSE_EXTRALESSON3_TEXT": true
+        }
+    }
+}

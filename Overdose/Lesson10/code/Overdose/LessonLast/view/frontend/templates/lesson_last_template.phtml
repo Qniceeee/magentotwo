@@ -1,0 +1,48 @@
+<span> Overdose lesson 10</span>
+
+<div id="accordion" data-mage-init='{
+        "accordion":{
+            "active": [1, 2],
+            "collapsible": true,
+            "openedState": "active",
+            "multipleCollapsible": true
+        }}'>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <h4>Title 1</h4>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <!-- json response -->
+    </div>
+
+</div>
+
+<script>
+    require(['jquery'],function(){
+        jQuery(document).ready(function() {
+            jQuery('[data-role="trigger"]').click(function(){
+                var $this = jQuery(this);
+                var isOpen = $this.closest('[data-role="collapsible"]').attr('aria-expanded');
+                var $content = $this.closest('[data-role="collapsible"]').next('[data-role="content"]');
+                if (isOpen === 'false')
+                {
+                    jQuery.ajax({
+                        url: "http://magento/overdoselast/custom/indexresponse",
+                        type: "GET",
+                        cache: false,
+                        dataType: "json",
+
+                        success: function(response){
+                            $content.text(response.customer_name);
+                        }
+                    });
+                }else {
+                    $content.text('');
+                }
+            });
+        });
+    });
+</script>
+

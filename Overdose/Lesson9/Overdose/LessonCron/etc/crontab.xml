@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="customers_logger">
+        <job name="overdose_logger_every_minute" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+        <job name="overdose_logger_every_hours" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>0 * * * *</schedule>
+        </job>
+        <job name="overdose_logger_every_day" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>0 0 * * *</schedule>
+        </job>
+        <job name="overdose_logger_every_weak" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>0 0 * * 6,0</schedule>
+        </job>
+        <job name="overdose_logger_every_mounts" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>0 0 1 * *</schedule>
+        </job>
+        <job name="overdose_logger_every_year" instance="Overdose\LessonCron\Cron\PutAllUsersToLog" method="execute">
+            <schedule>0 0 1 1 *</schedule>
+        </job>
+    </group>
+</config>

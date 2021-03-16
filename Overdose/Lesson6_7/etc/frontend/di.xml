@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Overdose\Lesson6\ViewModel\One">
+        <plugin name="plugin_for_console_lesson6" type="Overdose\Lesson6\Plugin\NewPlugin" sortOrder="1" disabled="false" />
+    </type>
+</config>
